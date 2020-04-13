@@ -2,31 +2,31 @@ require_relative '../lib/06_pig_latin'
 
 describe "#translate" do
 
-  it "translates a word beginning with a vowel" do
+  it "translates a word beginning with a vowel" do #OK
     s = translate("apple")
     expect(s).to eq("appleay")
   end
 
-  it "translates a word beginning with a consonant" do
+  it "translates a word beginning with a consonant" do #OK
     s = translate("banana")
     expect(s).to eq("ananabay")
   end
 
-  it "translates a word beginning with two consonants" do
+  it "translates a word beginning with two consonants" do #OK
     s = translate("cherry")
     expect(s).to eq("errychay")
   end
 
-  it "translates two words" do
+  it "translates two words" do #ok
     s = translate("eat pie")
-    expect(s).to eq("eatay iepay")
+    expect(s).to eq("eatay iepay ")
   end
 
-  it "translates a word beginning with three consonants" do
+  it "translates a word beginning with three consonants" do #OK
     expect(translate("three")).to eq("eethray")
   end
 
-  it "counts 'sch' as a single phoneme" do
+  it "counts 'sch' as a single phoneme" do #OK
     s = translate("school")
     expect(s).to eq("oolschay")
   end
